@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FBType Name="Stagesss22" Comment="Template for a Basic Function Block Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="HP" Date="2021-06-20">
+	</VersionInfo>
+	<InterfaceList>
+		<EventInputs>
+			<Event Name="INIT" Type="Event" Comment="Initialization Request">
+				<With Var="DT"/>
+			</Event>
+			<Event Name="REQ" Type="Event" Comment="Normal Execution Request">
+				<With Var="WFset"/>
+				<With Var="WSset"/>
+				<With Var="TFEEDset"/>
+				<With Var="DL21"/>
+				<With Var="PP21"/>
+				<With Var="BR21"/>
+				<With Var="TB21"/>
+				<With Var="TF20"/>
+				<With Var="B0set"/>
+			</Event>
+		</EventInputs>
+		<EventOutputs>
+			<Event Name="INITO" Type="Event" Comment="Initialization Confirm">
+				<With Var="TB22"/>
+				<With Var="TF22"/>
+				<With Var="RL22"/>
+			</Event>
+			<Event Name="CNF" Type="Event" Comment="Execution Confirmation">
+				<With Var="TB22"/>
+				<With Var="DL22"/>
+				<With Var="TF22"/>
+				<With Var="BR22"/>
+				<With Var="PP22"/>
+				<With Var="TFEED"/>
+				<With Var="WF"/>
+				<With Var="WS"/>
+				<With Var="RL22"/>
+				<With Var="B0"/>
+			</Event>
+		</EventOutputs>
+		<InputVars>
+			<VarDeclaration Name="B0set" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WFset" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WSset" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TFEEDset" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DL21" Type="REAL" Comment=""/>
+			<VarDeclaration Name="PP21" Type="REAL" Comment=""/>
+			<VarDeclaration Name="BR21" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TB21" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="TF20" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="DT" Type="REAL" Comment=""/>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="B0" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WF" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TFEED" Type="REAL" Comment=""/>
+			<VarDeclaration Name="PP22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="BR22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DL22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TB22" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="TF22" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="RL22" Type="LREAL" Comment=""/>
+		</OutputVars>
+	</InterfaceList>
+	<BasicFB>
+		<InternalVars>
+			<VarDeclaration Name="AB" Type="REAL" Comment="internal variabel"/>
+			<VarDeclaration Name="UU" Type="REAL" Comment=""/>
+			<VarDeclaration Name="REJ" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WMK" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TREF" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AD" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AHC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AHR" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="REC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WN" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WN_1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="XKN" Type="REAL" Comment=""/>
+			<VarDeclaration Name="C1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="HS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="G" Type="REAL" Comment=""/>
+			<VarDeclaration Name="W1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TFREC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DTS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TF22_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="RL22_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TB22_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="USS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="RHOB" Type="REAL" Comment=""/>
+			<VarDeclaration Name="CPB" Type="REAL" Comment=""/>
+			<VarDeclaration Name="CPF" Type="REAL" Comment=""/>
+			<VarDeclaration Name="FMW" Type="REAL" Comment=""/>
+			<VarDeclaration Name="HLV" Type="REAL" Comment=""/>
+			<VarDeclaration Name="HV" Type="REAL" Comment=""/>
+			<VarDeclaration Name="BPR" Type="REAL" Comment=""/>
+			<VarDeclaration Name="FMC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="U" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A" Type="REAL" Comment=""/>
+			<VarDeclaration Name="B" Type="REAL" Comment=""/>
+			<VarDeclaration Name="C" Type="REAL" Comment=""/>
+			<VarDeclaration Name="D1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="d" Type="REAL" Comment=""/>
+			<VarDeclaration Name="a" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A2" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A3" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A4" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A5" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A6" Type="REAL" Comment=""/>
+			<VarDeclaration Name="p" Type="REAL" Comment=""/>
+			<VarDeclaration Name="q" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="PC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DTB22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DEN22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DH22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DP22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DPDH22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DT22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="m" Type="REAL" Comment=""/>
+			<VarDeclaration Name="n" Type="REAL" Comment=""/>
+			<VarDeclaration Name="VR22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA22" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA44" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA66" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA22_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA44_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA66_last" Type="REAL" Comment=""/>
+		</InternalVars>
+		<ECC>
+			<ECState Name="START" Comment="Initial State" x="473.33333333333337" y="1120.0">
+			</ECState>
+			<ECState Name="State" Comment="" x="1333.3333333333335" y="533.3333333333334">
+				<ECAction Algorithm="initialize" Output="INITO"/>
+			</ECState>
+			<ECState Name="State_1" Comment="" x="1760.0" y="1060.0">
+				<ECAction Algorithm="proses"/>
+			</ECState>
+			<ECState Name="State_2" Comment="" x="1206.6666666666667" y="1420.0">
+				<ECAction Algorithm="integrasi" Output="CNF"/>
+			</ECState>
+			<ECTransition Source="START" Destination="State" Condition="INIT" Comment="" x="953.3333333333334" y="766.6666666666667"/>
+			<ECTransition Source="State" Destination="START" Condition="1" Comment="" x="1186.6666666666667" y="960.0"/>
+			<ECTransition Source="START" Destination="State_1" Condition="REQ" Comment="" x="1293.3333333333335" y="1160.0"/>
+			<ECTransition Source="State_1" Destination="State_2" Condition="1" Comment="" x="1666.6666666666667" y="1300.0"/>
+			<ECTransition Source="State_2" Destination="START" Condition="1" Comment="" x="1046.6666666666667" y="1400.0"/>
+		</ECC>
+		<Algorithm Name="initialize" Comment="Initialization algorithm">
+			<ST><![CDATA[TREF :=273.15;
+AB :=57.2727;
+AHC :=4069.2;
+AHR :=2639.7;
+AS :=3225.7;
+REC :=0.0;
+//TF2:=TF2;
+
+//TFEED :=TFEED1+TREF; 
+ //TS:=TS1+TREF;
+WN :=3.0;
+XKN :=0.68;
+HS:=0.11;
+G :=9.81;
+W1 :=0.50;
+ 
+RL22 := 0.556817361925019;
+TB22 := 314.548634310388; 
+TF22 := 310.669094657679; 
+TF20 := 314.769851417199;
+
+
+RL22_last :=RL22;    
+TB22_last :=TB22;   
+TF22_last :=TF22;   
+
+
+
+
+]]></ST>
+		</Algorithm>
+		<Algorithm Name="proses" Comment="kalkulasi">
+			<ST><![CDATA[B0 :=B0set;
+WS :=WSset;
+WF:=WFset;
+TFEED:=TFEEDset;
+TFEED:=TFEEDset;
+UU := TFEEDset;
+U :=UU; 
+
+REC :=0.0;
+REJ:=95.35;
+WMK:=WF-REJ-REC;
+
+USS :=49.767;
+C1 :=0.625;
+RHOB :=1032.4; //maassa jenis brine
+CPB :=1.00; //heatcapacity Brine
+CPF :=1.00; //heat capacity feed
+FMW :=23654.0;
+HLV :=563.7959;
+HV :=625.1971;
+BPR :=2.192; 
+FMC :=34736.09;
+//U :=UU; //feed temp
+
+
+
+///  Calculate the physical properties
+
+//A :=3.2437814;
+//B :=5.86826*0.001;
+//C :=1.1702379*0.00000001;
+//D1 :=2.1878462*0.001;
+//TC :=647.27; 
+//PC :=218.167; 
+
+
+A1 :=3.2437814;
+A2:=5.86826*0.001;
+A3:=1.1702379*0.00000001;
+A4 :=2.1878462*0.001;
+A5 :=647.27; 
+A6 :=218.167; 
+
+DTB22 :=A5-TB22;
+DEN22 :=(A1+A2*DTB22+A3*DTB22*DTB22*DTB22)/(1+A4*DTB22)*DTB22/TB22;
+p:=DEN22;
+q:=10.0;
+PP22 :=A6/(EXPT(q, p));
+
+// calculate the brine flow rates
+DP22:=PP21-PP22;
+DH22:=RL22-C1*HS; 
+DPDH22 :=DP22*101000+G*RHOB*DH22; 
+m:=DPDH22*RHOB;
+n:=0.5;
+BR22 :=W1*XKN*RL22*(EXPT(m, n));
+BR22 :=BR22*60.0/1000.0;
+
+// calculate the vapor flow rates
+    
+DT22 :=TB22-BPR/1.8-(TFEED+TF22)*0.5;
+VR22:=U*AHR*DT22/HLV/1000.0;
+DL22 :=DL21+VR22;
+
+
+//// state equation
+DELTA22 :=(BR21-BR22-VR22-B0+WMK)*1000.0/RHOB/AB;
+DELTA44 :=((BR21*CPB*(TB21-TB22))+(WMK*CPB*(TF20-TB22))-VR22*(HV-CPB*(TB22-TREF)))*1000.0/AB/RHOB/CPB/RL22;
+DELTA66 :=(WF*CPF*(TFEED-TF22)*1000+(U*AHR*DT22))/FMW/CPF;]]></ST>
+		</Algorithm>
+		<Algorithm Name="integrasi" Comment="new algorithm">
+			<ST><![CDATA[B0:=B0set;
+WF :=WFset;
+WS :=WSset;
+TFEED:=TFEEDset;
+//integrasi
+RL22 := (DELTA22 + DELTA22_last)*0.5*DT + RL22_last;
+DELTA22_last :=DELTA22 ;
+RL22_last :=RL22; 
+
+TB22:= (DELTA44 + DELTA44_last)*0.5*DT + TB22_last;
+DELTA44_last :=DELTA44 ;
+TB22_last:=TB22; 
+
+TF22 := (DELTA66 + DELTA66_last)*0.5*DT + TF22_last;
+DELTA66_last :=DELTA66 ;
+TF22_last :=TF22; 
+
+
+]]></ST>
+		</Algorithm>
+	</BasicFB>
+</FBType>

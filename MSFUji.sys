@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System Name="MSFUji" Comment="">
+	<VersionInfo Version="1.0" Author="HP" Date="2021-07-06">
+	</VersionInfo>
+	<Application Name="MSFFApp" Comment="">
+		<SubAppNetwork>
+			<FB Name="E_CYCLE" Type="E_CYCLE" Comment="" x="-133.33333333333334" y="266.6666666666667">
+				<Parameter Name="DT" Value="T#10ms"/>
+			</FB>
+			<FB Name="Stage3" Type="Stage3" Comment="" x="5466.666666666667" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage4" Type="Stage4" Comment="" x="7200.0" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage5" Type="Stage5" Comment="" x="9066.666666666668" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage6" Type="Stage6" Comment="" x="10933.333333333334" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage7" Type="Stage7" Comment="" x="13066.666666666668" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage8" Type="Stage8" Comment="" x="15200.0" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage9" Type="Stage9" Comment="" x="17200.0" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage10" Type="Stage10" Comment="" x="18933.333333333336" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage11" Type="Stage11" Comment="" x="20533.333333333336" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage12" Type="Stage12" Comment="" x="22133.333333333336" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage13" Type="Stage13" Comment="" x="23866.666666666668" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage14" Type="Stage14" Comment="" x="25600.0" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage15" Type="Stage15" Comment="" x="27466.666666666668" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage16" Type="Stage16" Comment="" x="29466.666666666668" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage17" Type="Stage17" Comment="" x="31333.333333333336" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage18" Type="Stage18" Comment="" x="33200.0" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage19" Type="Stage19" Comment="" x="34800.0" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage20" Type="Stage20" Comment="" x="36800.0" y="400.0">
+				<Parameter Name="WFset" Value="143.81"/>
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage21" Type="Stage21" Comment="" x="38666.66666666667" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stagesss22" Type="Stagesss22" Comment="" x="40666.66666666667" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage1" Type="Stage1" Comment="" x="2666.666666666667" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage2" Type="Stage2" Comment="" x="4133.333333333334" y="400.0">
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<FB Name="Stage0" Type="Stage0" Comment="" x="1200.0" y="400.0">
+				<Parameter Name="B0set" Value="217.35"/>
+				<Parameter Name="WSset" Value="2.435"/>
+				<Parameter Name="TFEEDset" Value="35"/>
+				<Parameter Name="TSset" Value="98"/>
+				<Parameter Name="DT" Value="0.01"/>
+			</FB>
+			<EventConnections>
+				<Connection Source="Stage4.INITO" Destination="Stage5.INIT" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage4.CNF" Destination="Stage5.REQ" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage5.INITO" Destination="Stage6.INIT" Comment="" dx1="1233.3333333333335"/>
+				<Connection Source="Stage5.CNF" Destination="Stage6.REQ" Comment="" dx1="1233.3333333333335"/>
+				<Connection Source="Stage6.INITO" Destination="Stage7.INIT" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage6.CNF" Destination="Stage7.REQ" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage7.INITO" Destination="Stage8.INIT" Comment="" dx1="506.6666666666667"/>
+				<Connection Source="Stage7.CNF" Destination="Stage8.REQ" Comment="" dx1="506.6666666666667"/>
+				<Connection Source="Stage8.INITO" Destination="Stage9.INIT" Comment="" dx1="380.0"/>
+				<Connection Source="Stage8.CNF" Destination="Stage9.REQ" Comment="" dx1="380.0"/>
+				<Connection Source="Stage9.INITO" Destination="Stage10.INIT" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage9.CNF" Destination="Stage10.REQ" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage10.INITO" Destination="Stage11.INIT" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage10.CNF" Destination="Stage11.REQ" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage11.INITO" Destination="Stage12.INIT" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage11.CNF" Destination="Stage12.REQ" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage12.INITO" Destination="Stage13.INIT" Comment="" dx1="346.6666666666667"/>
+				<Connection Source="Stage12.CNF" Destination="Stage13.REQ" Comment="" dx1="346.6666666666667"/>
+				<Connection Source="Stage13.INITO" Destination="Stage14.INIT" Comment="" dx1="413.33333333333337"/>
+				<Connection Source="Stage13.CNF" Destination="Stage14.REQ" Comment="" dx1="413.33333333333337"/>
+				<Connection Source="Stage14.INITO" Destination="Stage15.INIT" Comment="" dx1="560.0"/>
+				<Connection Source="Stage14.CNF" Destination="Stage15.REQ" Comment="" dx1="560.0"/>
+				<Connection Source="Stage15.INITO" Destination="Stage16.INIT" Comment="" dx1="500.0"/>
+				<Connection Source="Stage15.CNF" Destination="Stage16.REQ" Comment="" dx1="500.0"/>
+				<Connection Source="Stage16.INITO" Destination="Stage17.INIT" Comment="" dx1="393.33333333333337"/>
+				<Connection Source="Stage16.CNF" Destination="Stage17.REQ" Comment="" dx1="393.33333333333337"/>
+				<Connection Source="Stage17.INITO" Destination="Stage18.INIT" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage17.CNF" Destination="Stage18.REQ" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage18.INITO" Destination="Stage19.INIT" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage18.CNF" Destination="Stage19.REQ" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage19.INITO" Destination="Stage20.INIT" Comment="" dx1="500.0"/>
+				<Connection Source="Stage19.CNF" Destination="Stage20.REQ" Comment="" dx1="500.0"/>
+				<Connection Source="Stage20.INITO" Destination="Stage21.INIT" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage20.CNF" Destination="Stage21.REQ" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage21.INITO" Destination="Stagesss22.INIT" Comment="" dx1="300.0"/>
+				<Connection Source="Stage21.CNF" Destination="Stagesss22.REQ" Comment="" dx1="300.0"/>
+				<Connection Source="Stage3.INITO" Destination="Stage4.INIT" Comment="" dx1="500.0"/>
+				<Connection Source="Stage3.CNF" Destination="Stage4.REQ" Comment="" dx1="500.0"/>
+				<Connection Source="Stage1.INITO" Destination="Stage2.INIT" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage1.CNF" Destination="Stage2.REQ" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="E_CYCLE.EO" Destination="Stage0.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="Stage0.INITO" Destination="Stage1.INIT" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage0.CNF" Destination="Stage1.REQ" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage2.INITO" Destination="Stage3.INIT" Comment="" dx1="300.0"/>
+				<Connection Source="Stage2.CNF" Destination="Stage3.REQ" Comment="" dx1="300.0"/>
+			</EventConnections>
+			<DataConnections>
+				<Connection Source="Stage3.B0set" Destination="Stage4.B0set" Comment="" dx1="1166.6666666666667"/>
+				<Connection Source="Stage3.WSset" Destination="Stage4.WSset" Comment="" dx1="1166.6666666666667"/>
+				<Connection Source="Stage3.TFEEDset" Destination="Stage4.TFEEDset" Comment="" dx1="1166.6666666666667"/>
+				<Connection Source="Stage3.DL3" Destination="Stage4.DL3" Comment="" dx1="440.0"/>
+				<Connection Source="Stage3.PP3" Destination="Stage4.PP3" Comment="" dx1="440.0"/>
+				<Connection Source="Stage3.BR3" Destination="Stage4.BR3" Comment="" dx1="1166.6666666666667"/>
+				<Connection Source="Stage3.TB3" Destination="Stage4.TB3" Comment="" dx1="1166.6666666666667"/>
+				<Connection Source="Stage4.TF4" Destination="Stage3.TF4" Comment="" dx1="80.0" dx2="80.0" dy="506.6666666666667"/>
+				<Connection Source="Stage4.B0" Destination="Stage5.B0" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage4.WS" Destination="Stage5.WS" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage4.TFEED" Destination="Stage5.TFEED" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage4.DL4" Destination="Stage5.DL4" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage4.PP4" Destination="Stage5.PP4" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage4.BR4" Destination="Stage5.BR4" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage4.TB4" Destination="Stage5.TB4" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage5.TF5" Destination="Stage4.TF5" Comment="" dx1="80.0" dx2="80.0" dy="320.0"/>
+				<Connection Source="Stage5.B0set" Destination="Stage6.B0set" Comment="" dx1="1233.3333333333335"/>
+				<Connection Source="Stage5.WSset" Destination="Stage6.WSset" Comment="" dx1="1233.3333333333335"/>
+				<Connection Source="Stage5.TFEEDset" Destination="Stage6.TFEEDset" Comment="" dx1="1233.3333333333335"/>
+				<Connection Source="Stage5.DL5" Destination="Stage6.DL5" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage5.PP5" Destination="Stage6.PP5" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage5.BR5" Destination="Stage6.BR5" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage5.TB5" Destination="Stage6.TB5" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage6.TF6" Destination="Stage5.TF6" Comment="" dx1="80.0" dx2="80.0" dy="426.6666666666667"/>
+				<Connection Source="Stage6.B0" Destination="Stage7.B0" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage6.WS" Destination="Stage7.WS" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage6.TFEED" Destination="Stage7.TFEED" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage6.DL6" Destination="Stage7.DL6" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage6.PP6" Destination="Stage7.PP6" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage6.BR6" Destination="Stage7.BR6" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage6.TB6" Destination="Stage7.TB6" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage7.TF7" Destination="Stage6.TF7" Comment="" dx1="80.0" dx2="80.0" dy="406.6666666666667"/>
+				<Connection Source="Stage7.B0set" Destination="Stage8.B0set" Comment="" dx1="506.6666666666667"/>
+				<Connection Source="Stage7.WSset" Destination="Stage8.WSset" Comment="" dx1="506.6666666666667"/>
+				<Connection Source="Stage7.TFEEDset" Destination="Stage8.TFEEDset" Comment="" dx1="506.6666666666667"/>
+				<Connection Source="Stage7.DL7" Destination="Stage8.DL7" Comment="" dx1="500.0"/>
+				<Connection Source="Stage7.PP7" Destination="Stage8.PP7" Comment="" dx1="500.0"/>
+				<Connection Source="Stage7.BR7" Destination="Stage8.BR7" Comment="" dx1="500.0"/>
+				<Connection Source="Stage7.TB7" Destination="Stage8.TB7" Comment="" dx1="500.0"/>
+				<Connection Source="Stage8.TF8" Destination="Stage7.TF8" Comment="" dx1="80.0" dx2="80.0" dy="413.33333333333337"/>
+				<Connection Source="Stage8.B0" Destination="Stage9.B0" Comment="" dx1="380.0"/>
+				<Connection Source="Stage8.WS" Destination="Stage9.WS" Comment="" dx1="380.0"/>
+				<Connection Source="Stage8.TFEED" Destination="Stage9.TFEED" Comment="" dx1="380.0"/>
+				<Connection Source="Stage8.DL8" Destination="Stage9.DL8" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage8.PP8" Destination="Stage9.PP8" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage8.BR8" Destination="Stage9.BR8" Comment="" dx1="380.0"/>
+				<Connection Source="Stage8.TB8" Destination="Stage9.TB8" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage9.TF9" Destination="Stage8.TF9" Comment="" dx1="80.0" dx2="80.0" dy="573.3333333333334"/>
+				<Connection Source="Stage9.B0set" Destination="Stage10.B0set" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage9.WSset" Destination="Stage10.WSset" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage9.TFEEDset" Destination="Stage10.TFEEDset" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage9.DL9" Destination="Stage10.DL9" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage9.PP9" Destination="Stage10.PP9" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage9.BR9" Destination="Stage10.BR9" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage9.TB9" Destination="Stage10.TB9" Comment="" dx1="406.6666666666667"/>
+				<Connection Source="Stage10.TF10" Destination="Stage9.TF10" Comment="" dx1="80.0" dx2="80.0" dy="433.33333333333337"/>
+				<Connection Source="Stage10.B0" Destination="Stage11.B0" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage10.WS" Destination="Stage11.WS" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage10.TFEED" Destination="Stage11.TFEED" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage10.DL10" Destination="Stage11.DL10" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage10.PP10" Destination="Stage11.PP10" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage10.BR10" Destination="Stage11.BR10" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage10.TB10" Destination="Stage11.TB10" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage11.TF11" Destination="Stage10.TF11" Comment="" dx1="80.0" dx2="80.0" dy="446.6666666666667"/>
+				<Connection Source="Stage11.B0set" Destination="Stage12.B0set" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage11.WSset" Destination="Stage12.WSset" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage11.TFEEDset" Destination="Stage12.TFEEDset" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage11.DL11" Destination="Stage12.DL11" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage11.PP11" Destination="Stage12.PP11" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage11.BR11" Destination="Stage12.BR11" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage11.TB11" Destination="Stage12.TB11" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage12.TF12" Destination="Stage11.TF12" Comment="" dx1="80.0" dx2="80.0" dy="380.0"/>
+				<Connection Source="Stage12.B0" Destination="Stage13.B0" Comment="" dx1="480.0"/>
+				<Connection Source="Stage12.WS" Destination="Stage13.WS" Comment="" dx1="480.0"/>
+				<Connection Source="Stage12.TFEED" Destination="Stage13.TFEED" Comment="" dx1="480.0"/>
+				<Connection Source="Stage12.DL12" Destination="Stage13.DL12" Comment="" dx1="480.0"/>
+				<Connection Source="Stage12.PP12" Destination="Stage13.PP12" Comment="" dx1="480.0"/>
+				<Connection Source="Stage12.BR12" Destination="Stage13.BR12" Comment="" dx1="480.0"/>
+				<Connection Source="Stage12.TB12" Destination="Stage13.TB12" Comment="" dx1="480.0"/>
+				<Connection Source="Stage13.TF13" Destination="Stage12.TF13" Comment="" dx1="80.0" dx2="80.0" dy="226.66666666666669"/>
+				<Connection Source="Stage13.B0set" Destination="Stage14.B0set" Comment="" dx1="413.33333333333337"/>
+				<Connection Source="Stage13.WSset" Destination="Stage14.WSset" Comment="" dx1="413.33333333333337"/>
+				<Connection Source="Stage13.TFEEDset" Destination="Stage14.TFEEDset" Comment="" dx1="413.33333333333337"/>
+				<Connection Source="Stage13.DL13" Destination="Stage14.DL13" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage13.PP13" Destination="Stage14.PP13" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage13.BR13" Destination="Stage14.BR13" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage13.TB13" Destination="Stage14.TB13" Comment="" dx1="413.33333333333337"/>
+				<Connection Source="Stage14.TF14" Destination="Stage13.TF14" Comment="" dx1="80.0" dx2="80.0" dy="380.0"/>
+				<Connection Source="Stage14.B0" Destination="Stage15.B0" Comment="" dx1="560.0"/>
+				<Connection Source="Stage14.WS" Destination="Stage15.WS" Comment="" dx1="560.0"/>
+				<Connection Source="Stage14.TFEED" Destination="Stage15.TFEED" Comment="" dx1="560.0"/>
+				<Connection Source="Stage14.DL14" Destination="Stage15.DL14" Comment="" dx1="646.6666666666667"/>
+				<Connection Source="Stage14.PP14" Destination="Stage15.PP14" Comment="" dx1="646.6666666666667"/>
+				<Connection Source="Stage14.BR14" Destination="Stage15.BR14" Comment="" dx1="646.6666666666667"/>
+				<Connection Source="Stage14.TB14" Destination="Stage15.TB14" Comment="" dx1="646.6666666666667"/>
+				<Connection Source="Stage15.TF15" Destination="Stage14.TF15" Comment="" dx1="80.0" dx2="80.0" dy="320.0"/>
+				<Connection Source="Stage15.B0set" Destination="Stage16.B0set" Comment="" dx1="500.0"/>
+				<Connection Source="Stage15.WSset" Destination="Stage16.WSset" Comment="" dx1="500.0"/>
+				<Connection Source="Stage15.TFEEDset" Destination="Stage16.TFEEDset" Comment="" dx1="500.0"/>
+				<Connection Source="Stage15.DL15" Destination="Stage16.DL15" Comment="" dx1="500.0"/>
+				<Connection Source="Stage15.PP15" Destination="Stage16.PP15" Comment="" dx1="500.0"/>
+				<Connection Source="Stage15.BR15" Destination="Stage16.BR15" Comment="" dx1="500.0"/>
+				<Connection Source="Stage15.TB15" Destination="Stage16.TB15" Comment="" dx1="500.0"/>
+				<Connection Source="Stage16.TF16" Destination="Stage15.TF16" Comment="" dx1="80.0" dx2="80.0" dy="660.0"/>
+				<Connection Source="Stage16.B0" Destination="Stage17.B0" Comment="" dx1="393.33333333333337"/>
+				<Connection Source="Stage16.WS" Destination="Stage17.WS" Comment="" dx1="393.33333333333337"/>
+				<Connection Source="Stage16.TFEED" Destination="Stage17.TFEED" Comment="" dx1="393.33333333333337"/>
+				<Connection Source="Stage16.DL16" Destination="Stage17.DL16" Comment="" dx1="526.6666666666667"/>
+				<Connection Source="Stage16.PP16" Destination="Stage17.PP16" Comment="" dx1="526.6666666666667"/>
+				<Connection Source="Stage16.BR16" Destination="Stage17.BR16" Comment="" dx1="526.6666666666667"/>
+				<Connection Source="Stage16.TB16" Destination="Stage17.TB16" Comment="" dx1="526.6666666666667"/>
+				<Connection Source="Stage17.TF17" Destination="Stage16.TF17" Comment="" dx1="80.0" dx2="80.0" dy="493.33333333333337"/>
+				<Connection Source="Stage17.B0set" Destination="Stage18.B0set" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage17.WSset" Destination="Stage18.WSset" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage17.TFEEDset" Destination="Stage18.TFEEDset" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage17.DL17" Destination="Stage18.DL17" Comment="" dx1="540.0"/>
+				<Connection Source="Stage17.PP17" Destination="Stage18.PP17" Comment="" dx1="540.0"/>
+				<Connection Source="Stage17.BR17" Destination="Stage18.BR17" Comment="" dx1="540.0"/>
+				<Connection Source="Stage17.TB17" Destination="Stage18.TB17" Comment="" dx1="540.0"/>
+				<Connection Source="Stage18.TF18" Destination="Stage17.TF18" Comment="" dx1="80.0" dx2="80.0" dy="346.6666666666667"/>
+				<Connection Source="Stage18.B0" Destination="Stage19.B0" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage18.WS" Destination="Stage19.WS" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage18.TFEED" Destination="Stage19.TFEED" Comment="" dx1="386.6666666666667"/>
+				<Connection Source="Stage18.DL18" Destination="Stage19.DL18" Comment="" dx1="586.6666666666667"/>
+				<Connection Source="Stage18.PP18" Destination="Stage19.PP18" Comment="" dx1="586.6666666666667"/>
+				<Connection Source="Stage18.BR18" Destination="Stage19.BR18" Comment="" dx1="586.6666666666667"/>
+				<Connection Source="Stage18.TB18" Destination="Stage19.TB18" Comment="" dx1="586.6666666666667"/>
+				<Connection Source="Stage19.TF19" Destination="Stage18.TF19" Comment="" dx1="80.0" dx2="80.0" dy="426.6666666666667"/>
+				<Connection Source="Stage19.B0set" Destination="Stage20.B0set" Comment="" dx1="500.0"/>
+				<Connection Source="Stage19.WSset" Destination="Stage20.WSset" Comment="" dx1="546.6666666666667"/>
+				<Connection Source="Stage19.TFEEDset" Destination="Stage20.TFEEDset" Comment="" dx1="546.6666666666667"/>
+				<Connection Source="Stage19.DL19" Destination="Stage20.DL19" Comment="" dx1="546.6666666666667"/>
+				<Connection Source="Stage19.PP19" Destination="Stage20.PP19" Comment="" dx1="546.6666666666667"/>
+				<Connection Source="Stage19.BR19" Destination="Stage20.BR19" Comment="" dx1="546.6666666666667"/>
+				<Connection Source="Stage19.TB19" Destination="Stage20.TB19" Comment="" dx1="500.0"/>
+				<Connection Source="Stage20.B0" Destination="Stage21.B0" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage20.WF" Destination="Stage21.WF" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage20.WS" Destination="Stage21.WS" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage20.TFEED" Destination="Stage21.TFEED" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage20.DL20" Destination="Stage21.DL20" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage20.PP20" Destination="Stage21.PP20" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage20.BR20" Destination="Stage21.BR20" Comment="" dx1="566.6666666666667"/>
+				<Connection Source="Stage20.TB20" Destination="Stage21.TB20" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage21.TF21" Destination="Stage20.TF21" Comment="" dx1="80.0" dx2="80.0" dy="320.0"/>
+				<Connection Source="Stage21.B0set" Destination="Stagesss22.B0set" Comment="" dx1="300.0"/>
+				<Connection Source="Stage21.WFset" Destination="Stagesss22.WFset" Comment="" dx1="300.0"/>
+				<Connection Source="Stage21.WSset" Destination="Stagesss22.WSset" Comment="" dx1="300.0"/>
+				<Connection Source="Stage21.TFEEDset" Destination="Stagesss22.TFEEDset" Comment="" dx1="300.0"/>
+				<Connection Source="Stage21.PP21" Destination="Stagesss22.PP21" Comment="" dx1="320.0"/>
+				<Connection Source="Stage21.BR21" Destination="Stagesss22.BR21" Comment="" dx1="320.0"/>
+				<Connection Source="Stage21.DL21" Destination="Stagesss22.DL21" Comment="" dx1="320.0"/>
+				<Connection Source="Stage21.TB21" Destination="Stagesss22.TB21" Comment="" dx1="320.0"/>
+				<Connection Source="Stage20.TF20" Destination="Stagesss22.TF20" Comment="" dx1="1233.3333333333335"/>
+				<Connection Source="Stagesss22.TF22" Destination="Stage21.TF22" Comment="" dx1="80.0" dx2="80.0" dy="366.6666666666667"/>
+				<Connection Source="Stagesss22.TB22" Destination="Stage19.TB22" Comment="" dx1="80.0" dx2="80.0" dy="606.6666666666667"/>
+				<Connection Source="Stage1.B0set" Destination="Stage2.B0set" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage1.WSset" Destination="Stage2.WSset" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage1.TFEEDset" Destination="Stage2.TFEEDset" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage1.DL1" Destination="Stage2.DL1" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage1.PP1" Destination="Stage2.PP1" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage1.BR1" Destination="Stage2.BR1" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage1.TB1" Destination="Stage2.TB1" Comment="" dx1="366.6666666666667"/>
+				<Connection Source="Stage2.TF2" Destination="Stage1.TF2" Comment="" dx1="80.0" dx2="80.0" dy="366.6666666666667"/>
+				<Connection Source="Stage1.TF1" Destination="Stage0.TF1" Comment="" dx1="80.0" dx2="80.0" dy="293.33333333333337"/>
+				<Connection Source="Stage0.B0" Destination="Stage1.B0" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage0.WS" Destination="Stage1.WS" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage0.TFEED" Destination="Stage1.TFEED" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage0.PP0" Destination="Stage1.PP0" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage0.TB0" Destination="Stage1.TB0" Comment="" dx1="433.33333333333337"/>
+				<Connection Source="Stage2.B0" Destination="Stage3.B0" Comment="" dx1="300.0"/>
+				<Connection Source="Stage2.WS" Destination="Stage3.WS" Comment="" dx1="300.0"/>
+				<Connection Source="Stage2.TFEED" Destination="Stage3.TFEED" Comment="" dx1="300.0"/>
+				<Connection Source="Stage2.PP2" Destination="Stage3.PP2" Comment="" dx1="300.0"/>
+				<Connection Source="Stage2.BR2" Destination="Stage3.BR2" Comment="" dx1="300.0"/>
+				<Connection Source="Stage2.DL2" Destination="Stage3.DL2" Comment="" dx1="300.0"/>
+				<Connection Source="Stage2.TB2" Destination="Stage3.TB2" Comment="" dx1="300.0"/>
+				<Connection Source="Stage3.TF3" Destination="Stage2.TF3" Comment="" dx1="80.0" dx2="80.0" dy="653.3333333333334"/>
+			</DataConnections>
+		</SubAppNetwork>
+	</Application>
+	<Device Name="FORTE_PC" Type="FORTE_PC" Comment="" x="1386.6666666666667" y="953.3333333333334">
+		<Parameter Name="MGR_ID" Value="&quot;localhost:61499&quot;"/>
+		<Attribute Name="Profile" Type="STRING" Value="HOLOBLOC" Comment="device profile"/>
+		<Attribute Name="Color" Type="STRING" Value="255,190,111" Comment="color"/>
+		<Resource Name="MSF" Type="EMB_RES" Comment="" x="0.0" y="0.0">
+			<FBNetwork>
+				<FB Name="E_CYCLE" Type="E_CYCLE" Comment="" x="1066.6666666666667" y="400.0">
+					<Parameter Name="DT" Value="T#10ms"/>
+				</FB>
+				<FB Name="" Type="Stage0" Comment="" x="2440.0" y="680.0">
+				</FB>
+				<FB Name="" Type="Stage2" Comment="" x="5600.0" y="800.0">
+				</FB>
+				<FB Name="Stage3" Type="Stage3" Comment="" x="7053.333333333334" y="800.0">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage4" Type="Stage4" Comment="" x="8666.666666666668" y="800.0">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage5" Type="Stage5" Comment="" x="10533.333333333334" y="933.3333333333334">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage6" Type="Stage6" Comment="" x="12133.333333333334" y="933.3333333333334">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage7" Type="Stage7" Comment="" x="13600.0" y="1066.6666666666667">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage8" Type="Stage8" Comment="" x="15333.333333333334" y="1066.6666666666667">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage9" Type="Stage9" Comment="" x="16846.666666666668" y="1066.6666666666667">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage10" Type="Stage10" Comment="" x="18400.0" y="1200.0">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage11" Type="Stage11" Comment="" x="20000.0" y="1200.0">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage12" Type="Stage12" Comment="" x="21866.666666666668" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage13" Type="Stage13" Comment="" x="23566.666666666668" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage14" Type="Stage14" Comment="" x="25433.333333333336" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage15" Type="Stage15" Comment="" x="27460.0" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage16" Type="Stage16" Comment="" x="29200.0" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage17" Type="Stage17" Comment="" x="30986.666666666668" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage18" Type="Stage18" Comment="" x="32800.0" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage19" Type="Stage19" Comment="" x="34706.66666666667" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage20" Type="Stage20" Comment="" x="36533.333333333336" y="1333.3333333333335">
+					<Parameter Name="WFset" Value="143.81"/>
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage21" Type="Stage21" Comment="" x="38400.0" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stagesss22" Type="Stagesss22" Comment="" x="39733.333333333336" y="1333.3333333333335">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage1" Type="Stage1" Comment="" x="2666.666666666667" y="400.0">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage2" Type="Stage2" Comment="" x="4133.333333333334" y="400.0">
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<FB Name="Stage0" Type="Stage0" Comment="" x="1200.0" y="400.0">
+					<Parameter Name="B0set" Value="217.35"/>
+					<Parameter Name="WSset" Value="2.435"/>
+					<Parameter Name="TFEEDset" Value="35"/>
+					<Parameter Name="TSset" Value="98"/>
+					<Parameter Name="DT" Value="0.01"/>
+				</FB>
+				<EventConnections>
+					<Connection Source="START.COLD" Destination="E_CYCLE.START" Comment="" dx1="133.33333333333334"/>
+					<Connection Source="START.WARM" Destination="E_CYCLE.START" Comment="" dx1="133.33333333333334"/>
+					<Connection Source="Stage4.INITO" Destination="Stage5.INIT" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage4.CNF" Destination="Stage5.REQ" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage5.INITO" Destination="Stage6.INIT" Comment=""/>
+					<Connection Source="Stage5.CNF" Destination="Stage6.REQ" Comment=""/>
+					<Connection Source="Stage6.INITO" Destination="Stage7.INIT" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage6.CNF" Destination="Stage7.REQ" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage7.INITO" Destination="Stage8.INIT" Comment=""/>
+					<Connection Source="Stage7.CNF" Destination="Stage8.REQ" Comment=""/>
+					<Connection Source="Stage8.INITO" Destination="Stage9.INIT" Comment=""/>
+					<Connection Source="Stage8.CNF" Destination="Stage9.REQ" Comment=""/>
+					<Connection Source="Stage9.INITO" Destination="Stage10.INIT" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage9.CNF" Destination="Stage10.REQ" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage10.INITO" Destination="Stage11.INIT" Comment=""/>
+					<Connection Source="Stage10.CNF" Destination="Stage11.REQ" Comment=""/>
+					<Connection Source="Stage11.INITO" Destination="Stage12.INIT" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage11.CNF" Destination="Stage12.REQ" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage12.INITO" Destination="Stage13.INIT" Comment=""/>
+					<Connection Source="Stage12.CNF" Destination="Stage13.REQ" Comment=""/>
+					<Connection Source="Stage13.INITO" Destination="Stage14.INIT" Comment=""/>
+					<Connection Source="Stage13.CNF" Destination="Stage14.REQ" Comment=""/>
+					<Connection Source="Stage14.INITO" Destination="Stage15.INIT" Comment=""/>
+					<Connection Source="Stage14.CNF" Destination="Stage15.REQ" Comment=""/>
+					<Connection Source="Stage15.INITO" Destination="Stage16.INIT" Comment=""/>
+					<Connection Source="Stage15.CNF" Destination="Stage16.REQ" Comment=""/>
+					<Connection Source="Stage16.INITO" Destination="Stage17.INIT" Comment=""/>
+					<Connection Source="Stage16.CNF" Destination="Stage17.REQ" Comment=""/>
+					<Connection Source="Stage17.INITO" Destination="Stage18.INIT" Comment=""/>
+					<Connection Source="Stage17.CNF" Destination="Stage18.REQ" Comment=""/>
+					<Connection Source="Stage18.INITO" Destination="Stage19.INIT" Comment=""/>
+					<Connection Source="Stage18.CNF" Destination="Stage19.REQ" Comment=""/>
+					<Connection Source="Stage19.INITO" Destination="Stage20.INIT" Comment=""/>
+					<Connection Source="Stage19.CNF" Destination="Stage20.REQ" Comment=""/>
+					<Connection Source="Stage20.INITO" Destination="Stage21.INIT" Comment=""/>
+					<Connection Source="Stage20.CNF" Destination="Stage21.REQ" Comment=""/>
+					<Connection Source="Stage21.INITO" Destination="Stagesss22.INIT" Comment=""/>
+					<Connection Source="Stage21.CNF" Destination="Stagesss22.REQ" Comment=""/>
+					<Connection Source="Stage3.INITO" Destination="Stage4.INIT" Comment=""/>
+					<Connection Source="Stage3.CNF" Destination="Stage4.REQ" Comment=""/>
+					<Connection Source="Stage1.INITO" Destination="Stage2.INIT" Comment=""/>
+					<Connection Source="Stage1.CNF" Destination="Stage2.REQ" Comment=""/>
+					<Connection Source="E_CYCLE.EO" Destination="Stage0.REQ" Comment=""/>
+					<Connection Source="Stage0.INITO" Destination="Stage1.INIT" Comment=""/>
+					<Connection Source="Stage0.CNF" Destination="Stage1.REQ" Comment=""/>
+					<Connection Source="START.COLD" Destination="Stage0.INIT" Comment=""/>
+					<Connection Source="START.WARM" Destination="Stage0.INIT" Comment=""/>
+					<Connection Source="Stage2.INITO" Destination="Stage3.INIT" Comment=""/>
+					<Connection Source="Stage2.CNF" Destination="Stage3.REQ" Comment=""/>
+				</EventConnections>
+				<DataConnections>
+					<Connection Source="Stage3.B0set" Destination="Stage4.B0set" Comment=""/>
+					<Connection Source="Stage3.WSset" Destination="Stage4.WSset" Comment=""/>
+					<Connection Source="Stage3.TFEEDset" Destination="Stage4.TFEEDset" Comment=""/>
+					<Connection Source="Stage3.DL3" Destination="Stage4.DL3" Comment="" dx1="440.0"/>
+					<Connection Source="Stage3.PP3" Destination="Stage4.PP3" Comment="" dx1="440.0"/>
+					<Connection Source="Stage3.BR3" Destination="Stage4.BR3" Comment=""/>
+					<Connection Source="Stage3.TB3" Destination="Stage4.TB3" Comment=""/>
+					<Connection Source="Stage4.TF4" Destination="Stage3.TF4" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage4.B0" Destination="Stage5.B0" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage4.WS" Destination="Stage5.WS" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage4.TFEED" Destination="Stage5.TFEED" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage4.DL4" Destination="Stage5.DL4" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage4.PP4" Destination="Stage5.PP4" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage4.BR4" Destination="Stage5.BR4" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage4.TB4" Destination="Stage5.TB4" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage5.TF5" Destination="Stage4.TF5" Comment="" dx1="80.0" dx2="80.0" dy="-13.333333333333334"/>
+					<Connection Source="Stage5.B0set" Destination="Stage6.B0set" Comment=""/>
+					<Connection Source="Stage5.WSset" Destination="Stage6.WSset" Comment=""/>
+					<Connection Source="Stage5.TFEEDset" Destination="Stage6.TFEEDset" Comment=""/>
+					<Connection Source="Stage5.DL5" Destination="Stage6.DL5" Comment="" dx1="433.33333333333337"/>
+					<Connection Source="Stage5.PP5" Destination="Stage6.PP5" Comment="" dx1="433.33333333333337"/>
+					<Connection Source="Stage5.BR5" Destination="Stage6.BR5" Comment="" dx1="433.33333333333337"/>
+					<Connection Source="Stage5.TB5" Destination="Stage6.TB5" Comment="" dx1="433.33333333333337"/>
+					<Connection Source="Stage6.TF6" Destination="Stage5.TF6" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage6.B0" Destination="Stage7.B0" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage6.WS" Destination="Stage7.WS" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage6.TFEED" Destination="Stage7.TFEED" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage6.DL6" Destination="Stage7.DL6" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage6.PP6" Destination="Stage7.PP6" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage6.BR6" Destination="Stage7.BR6" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage6.TB6" Destination="Stage7.TB6" Comment="" dx1="366.6666666666667"/>
+					<Connection Source="Stage7.TF7" Destination="Stage6.TF7" Comment="" dx1="80.0" dx2="80.0" dy="-13.333333333333334"/>
+					<Connection Source="Stage7.B0set" Destination="Stage8.B0set" Comment=""/>
+					<Connection Source="Stage7.WSset" Destination="Stage8.WSset" Comment=""/>
+					<Connection Source="Stage7.TFEEDset" Destination="Stage8.TFEEDset" Comment=""/>
+					<Connection Source="Stage7.DL7" Destination="Stage8.DL7" Comment="" dx1="500.0"/>
+					<Connection Source="Stage7.PP7" Destination="Stage8.PP7" Comment="" dx1="500.0"/>
+					<Connection Source="Stage7.BR7" Destination="Stage8.BR7" Comment="" dx1="500.0"/>
+					<Connection Source="Stage7.TB7" Destination="Stage8.TB7" Comment="" dx1="500.0"/>
+					<Connection Source="Stage8.TF8" Destination="Stage7.TF8" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage8.B0" Destination="Stage9.B0" Comment=""/>
+					<Connection Source="Stage8.WS" Destination="Stage9.WS" Comment=""/>
+					<Connection Source="Stage8.TFEED" Destination="Stage9.TFEED" Comment=""/>
+					<Connection Source="Stage8.DL8" Destination="Stage9.DL8" Comment="" dx1="386.6666666666667"/>
+					<Connection Source="Stage8.PP8" Destination="Stage9.PP8" Comment="" dx1="386.6666666666667"/>
+					<Connection Source="Stage8.BR8" Destination="Stage9.BR8" Comment=""/>
+					<Connection Source="Stage8.TB8" Destination="Stage9.TB8" Comment="" dx1="386.6666666666667"/>
+					<Connection Source="Stage9.TF9" Destination="Stage8.TF9" Comment=""/>
+					<Connection Source="Stage9.B0set" Destination="Stage10.B0set" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage9.WSset" Destination="Stage10.WSset" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage9.TFEEDset" Destination="Stage10.TFEEDset" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage9.DL9" Destination="Stage10.DL9" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage9.PP9" Destination="Stage10.PP9" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage9.BR9" Destination="Stage10.BR9" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage9.TB9" Destination="Stage10.TB9" Comment="" dx1="406.6666666666667"/>
+					<Connection Source="Stage10.TF10" Destination="Stage9.TF10" Comment="" dx1="80.0" dx2="80.0" dy="-66.66666666666667"/>
+					<Connection Source="Stage10.B0" Destination="Stage11.B0" Comment=""/>
+					<Connection Source="Stage10.WS" Destination="Stage11.WS" Comment=""/>
+					<Connection Source="Stage10.TFEED" Destination="Stage11.TFEED" Comment=""/>
+					<Connection Source="Stage10.DL10" Destination="Stage11.DL10" Comment="" dx1="433.33333333333337"/>
+					<Connection Source="Stage10.PP10" Destination="Stage11.PP10" Comment="" dx1="433.33333333333337"/>
+					<Connection Source="Stage10.BR10" Destination="Stage11.BR10" Comment=""/>
+					<Connection Source="Stage10.TB10" Destination="Stage11.TB10" Comment=""/>
+					<Connection Source="Stage11.TF11" Destination="Stage10.TF11" Comment=""/>
+					<Connection Source="Stage11.B0set" Destination="Stage12.B0set" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage11.WSset" Destination="Stage12.WSset" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage11.TFEEDset" Destination="Stage12.TFEEDset" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage11.DL11" Destination="Stage12.DL11" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage11.PP11" Destination="Stage12.PP11" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage11.BR11" Destination="Stage12.BR11" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage11.TB11" Destination="Stage12.TB11" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage12.TF12" Destination="Stage11.TF12" Comment="" dx1="80.0" dx2="80.0" dy="-13.333333333333334"/>
+					<Connection Source="Stage12.B0" Destination="Stage13.B0" Comment=""/>
+					<Connection Source="Stage12.WS" Destination="Stage13.WS" Comment=""/>
+					<Connection Source="Stage12.TFEED" Destination="Stage13.TFEED" Comment=""/>
+					<Connection Source="Stage12.DL12" Destination="Stage13.DL12" Comment="" dx1="480.0"/>
+					<Connection Source="Stage12.PP12" Destination="Stage13.PP12" Comment="" dx1="480.0"/>
+					<Connection Source="Stage12.BR12" Destination="Stage13.BR12" Comment="" dx1="480.0"/>
+					<Connection Source="Stage12.TB12" Destination="Stage13.TB12" Comment="" dx1="480.0"/>
+					<Connection Source="Stage13.TF13" Destination="Stage12.TF13" Comment=""/>
+					<Connection Source="Stage13.B0set" Destination="Stage14.B0set" Comment=""/>
+					<Connection Source="Stage13.WSset" Destination="Stage14.WSset" Comment=""/>
+					<Connection Source="Stage13.TFEEDset" Destination="Stage14.TFEEDset" Comment=""/>
+					<Connection Source="Stage13.DL13" Destination="Stage14.DL13" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage13.PP13" Destination="Stage14.PP13" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage13.BR13" Destination="Stage14.BR13" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage13.TB13" Destination="Stage14.TB13" Comment=""/>
+					<Connection Source="Stage14.TF14" Destination="Stage13.TF14" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage14.B0" Destination="Stage15.B0" Comment=""/>
+					<Connection Source="Stage14.WS" Destination="Stage15.WS" Comment=""/>
+					<Connection Source="Stage14.TFEED" Destination="Stage15.TFEED" Comment=""/>
+					<Connection Source="Stage14.DL14" Destination="Stage15.DL14" Comment="" dx1="646.6666666666667"/>
+					<Connection Source="Stage14.PP14" Destination="Stage15.PP14" Comment="" dx1="646.6666666666667"/>
+					<Connection Source="Stage14.BR14" Destination="Stage15.BR14" Comment="" dx1="646.6666666666667"/>
+					<Connection Source="Stage14.TB14" Destination="Stage15.TB14" Comment="" dx1="646.6666666666667"/>
+					<Connection Source="Stage15.TF15" Destination="Stage14.TF15" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage15.B0set" Destination="Stage16.B0set" Comment=""/>
+					<Connection Source="Stage15.WSset" Destination="Stage16.WSset" Comment=""/>
+					<Connection Source="Stage15.TFEEDset" Destination="Stage16.TFEEDset" Comment=""/>
+					<Connection Source="Stage15.DL15" Destination="Stage16.DL15" Comment="" dx1="500.0"/>
+					<Connection Source="Stage15.PP15" Destination="Stage16.PP15" Comment="" dx1="500.0"/>
+					<Connection Source="Stage15.BR15" Destination="Stage16.BR15" Comment="" dx1="500.0"/>
+					<Connection Source="Stage15.TB15" Destination="Stage16.TB15" Comment="" dx1="500.0"/>
+					<Connection Source="Stage16.TF16" Destination="Stage15.TF16" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage16.B0" Destination="Stage17.B0" Comment=""/>
+					<Connection Source="Stage16.WS" Destination="Stage17.WS" Comment=""/>
+					<Connection Source="Stage16.TFEED" Destination="Stage17.TFEED" Comment=""/>
+					<Connection Source="Stage16.DL16" Destination="Stage17.DL16" Comment="" dx1="526.6666666666667"/>
+					<Connection Source="Stage16.PP16" Destination="Stage17.PP16" Comment="" dx1="526.6666666666667"/>
+					<Connection Source="Stage16.BR16" Destination="Stage17.BR16" Comment="" dx1="526.6666666666667"/>
+					<Connection Source="Stage16.TB16" Destination="Stage17.TB16" Comment="" dx1="526.6666666666667"/>
+					<Connection Source="Stage17.TF17" Destination="Stage16.TF17" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage17.B0set" Destination="Stage18.B0set" Comment=""/>
+					<Connection Source="Stage17.WSset" Destination="Stage18.WSset" Comment=""/>
+					<Connection Source="Stage17.TFEEDset" Destination="Stage18.TFEEDset" Comment=""/>
+					<Connection Source="Stage17.DL17" Destination="Stage18.DL17" Comment="" dx1="540.0"/>
+					<Connection Source="Stage17.PP17" Destination="Stage18.PP17" Comment="" dx1="540.0"/>
+					<Connection Source="Stage17.BR17" Destination="Stage18.BR17" Comment="" dx1="540.0"/>
+					<Connection Source="Stage17.TB17" Destination="Stage18.TB17" Comment="" dx1="540.0"/>
+					<Connection Source="Stage18.TF18" Destination="Stage17.TF18" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage18.B0" Destination="Stage19.B0" Comment=""/>
+					<Connection Source="Stage18.WS" Destination="Stage19.WS" Comment=""/>
+					<Connection Source="Stage18.TFEED" Destination="Stage19.TFEED" Comment=""/>
+					<Connection Source="Stage18.DL18" Destination="Stage19.DL18" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="Stage18.PP18" Destination="Stage19.PP18" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="Stage18.BR18" Destination="Stage19.BR18" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="Stage18.TB18" Destination="Stage19.TB18" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="Stage19.TF19" Destination="Stage18.TF19" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage19.B0set" Destination="Stage20.B0set" Comment=""/>
+					<Connection Source="Stage19.WSset" Destination="Stage20.WSset" Comment="" dx1="546.6666666666667"/>
+					<Connection Source="Stage19.TFEEDset" Destination="Stage20.TFEEDset" Comment="" dx1="546.6666666666667"/>
+					<Connection Source="Stage19.DL19" Destination="Stage20.DL19" Comment="" dx1="546.6666666666667"/>
+					<Connection Source="Stage19.PP19" Destination="Stage20.PP19" Comment="" dx1="546.6666666666667"/>
+					<Connection Source="Stage19.BR19" Destination="Stage20.BR19" Comment="" dx1="546.6666666666667"/>
+					<Connection Source="Stage19.TB19" Destination="Stage20.TB19" Comment=""/>
+					<Connection Source="Stage20.B0" Destination="Stage21.B0" Comment=""/>
+					<Connection Source="Stage20.WF" Destination="Stage21.WF" Comment=""/>
+					<Connection Source="Stage20.WS" Destination="Stage21.WS" Comment=""/>
+					<Connection Source="Stage20.TFEED" Destination="Stage21.TFEED" Comment=""/>
+					<Connection Source="Stage20.DL20" Destination="Stage21.DL20" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage20.PP20" Destination="Stage21.PP20" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage20.BR20" Destination="Stage21.BR20" Comment="" dx1="566.6666666666667"/>
+					<Connection Source="Stage20.TB20" Destination="Stage21.TB20" Comment=""/>
+					<Connection Source="Stage21.TF21" Destination="Stage20.TF21" Comment="" dx1="80.0" dx2="80.0" dy="46.66666666666667"/>
+					<Connection Source="Stage21.B0set" Destination="Stagesss22.B0set" Comment=""/>
+					<Connection Source="Stage21.WFset" Destination="Stagesss22.WFset" Comment=""/>
+					<Connection Source="Stage21.WSset" Destination="Stagesss22.WSset" Comment=""/>
+					<Connection Source="Stage21.TFEEDset" Destination="Stagesss22.TFEEDset" Comment=""/>
+					<Connection Source="Stage21.DL21" Destination="Stagesss22.DL21" Comment="" dx1="300.0"/>
+					<Connection Source="Stage21.PP21" Destination="Stagesss22.PP21" Comment="" dx1="300.0"/>
+					<Connection Source="Stage21.BR21" Destination="Stagesss22.BR21" Comment="" dx1="300.0"/>
+					<Connection Source="Stage21.TB21" Destination="Stagesss22.TB21" Comment="" dx1="300.0"/>
+					<Connection Source="Stage20.TF20" Destination="Stagesss22.TF20" Comment=""/>
+					<Connection Source="Stagesss22.TF22" Destination="Stage21.TF22" Comment=""/>
+					<Connection Source="Stagesss22.TB22" Destination="Stage19.TB22" Comment=""/>
+					<Connection Source="Stage1.B0set" Destination="Stage2.B0set" Comment=""/>
+					<Connection Source="Stage1.WSset" Destination="Stage2.WSset" Comment=""/>
+					<Connection Source="Stage1.TFEEDset" Destination="Stage2.TFEEDset" Comment=""/>
+					<Connection Source="Stage1.DL1" Destination="Stage2.DL1" Comment=""/>
+					<Connection Source="Stage1.PP1" Destination="Stage2.PP1" Comment=""/>
+					<Connection Source="Stage1.BR1" Destination="Stage2.BR1" Comment=""/>
+					<Connection Source="Stage1.TB1" Destination="Stage2.TB1" Comment=""/>
+					<Connection Source="Stage2.TF2" Destination="Stage1.TF2" Comment=""/>
+					<Connection Source="Stage1.TF1" Destination="Stage0.TF1" Comment=""/>
+					<Connection Source="Stage0.B0" Destination="Stage1.B0" Comment=""/>
+					<Connection Source="Stage0.WS" Destination="Stage1.WS" Comment=""/>
+					<Connection Source="Stage0.TFEED" Destination="Stage1.TFEED" Comment=""/>
+					<Connection Source="Stage0.PP0" Destination="Stage1.PP0" Comment=""/>
+					<Connection Source="Stage0.TB0" Destination="Stage1.TB0" Comment=""/>
+					<Connection Source="Stage2.B0" Destination="Stage3.B0" Comment=""/>
+					<Connection Source="Stage2.WS" Destination="Stage3.WS" Comment=""/>
+					<Connection Source="Stage2.TFEED" Destination="Stage3.TFEED" Comment=""/>
+					<Connection Source="Stage2.PP2" Destination="Stage3.PP2" Comment=""/>
+					<Connection Source="Stage2.BR2" Destination="Stage3.BR2" Comment=""/>
+					<Connection Source="Stage2.DL2" Destination="Stage3.DL2" Comment=""/>
+					<Connection Source="Stage2.TB2" Destination="Stage3.TB2" Comment=""/>
+					<Connection Source="Stage3.TF3" Destination="Stage2.TF3" Comment=""/>
+				</DataConnections>
+			</FBNetwork>
+		</Resource>
+	</Device>
+	<Mapping From="MSFFApp.E_CYCLE" To="FORTE_PC.MSF.E_CYCLE"/>
+	<Mapping From="MSFFApp.Stage3" To="FORTE_PC.MSF.Stage3"/>
+	<Mapping From="MSFFApp.Stage4" To="FORTE_PC.MSF.Stage4"/>
+	<Mapping From="MSFFApp.Stage5" To="FORTE_PC.MSF.Stage5"/>
+	<Mapping From="MSFFApp.Stage6" To="FORTE_PC.MSF.Stage6"/>
+	<Mapping From="MSFFApp.Stage7" To="FORTE_PC.MSF.Stage7"/>
+	<Mapping From="MSFFApp.Stage8" To="FORTE_PC.MSF.Stage8"/>
+	<Mapping From="MSFFApp.Stage9" To="FORTE_PC.MSF.Stage9"/>
+	<Mapping From="MSFFApp.Stage10" To="FORTE_PC.MSF.Stage10"/>
+	<Mapping From="MSFFApp.Stage11" To="FORTE_PC.MSF.Stage11"/>
+	<Mapping From="MSFFApp.Stage12" To="FORTE_PC.MSF.Stage12"/>
+	<Mapping From="MSFFApp.Stage13" To="FORTE_PC.MSF.Stage13"/>
+	<Mapping From="MSFFApp.Stage14" To="FORTE_PC.MSF.Stage14"/>
+	<Mapping From="MSFFApp.Stage15" To="FORTE_PC.MSF.Stage15"/>
+	<Mapping From="MSFFApp.Stage16" To="FORTE_PC.MSF.Stage16"/>
+	<Mapping From="MSFFApp.Stage17" To="FORTE_PC.MSF.Stage17"/>
+	<Mapping From="MSFFApp.Stage18" To="FORTE_PC.MSF.Stage18"/>
+	<Mapping From="MSFFApp.Stage19" To="FORTE_PC.MSF.Stage19"/>
+	<Mapping From="MSFFApp.Stage20" To="FORTE_PC.MSF.Stage20"/>
+	<Mapping From="MSFFApp.Stage21" To="FORTE_PC.MSF.Stage21"/>
+	<Mapping From="MSFFApp.Stagesss22" To="FORTE_PC.MSF.Stagesss22"/>
+	<Mapping From="MSFFApp.Stage1" To="FORTE_PC.MSF.Stage1"/>
+	<Mapping From="MSFFApp.Stage2" To="FORTE_PC.MSF.Stage2"/>
+	<Mapping From="MSFFApp.Stage0" To="FORTE_PC.MSF.Stage0"/>
+	<Segment Name="Ethernet" Type="Ethernet" Comment="" x="2533.3333333333335" y="400.0" dx1="2000.0">
+		<Attribute Name="Color" Type="STRING" Value="209,119,196" Comment="color"/>
+	</Segment>
+	<Link SegmentName="Ethernet" CommResource="FORTE_PC" Comment="">
+	</Link>
+</System>

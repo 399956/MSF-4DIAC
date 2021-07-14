@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FBType Name="Stage17" Comment="Template for a Basic Function Block Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="HP" Date="2021-06-20">
+	</VersionInfo>
+	<InterfaceList>
+		<EventInputs>
+			<Event Name="INIT" Type="Event" Comment="Initialization Request">
+				<With Var="DT"/>
+			</Event>
+			<Event Name="REQ" Type="Event" Comment="Normal Execution Request">
+				<With Var="B0"/>
+				<With Var="WS"/>
+				<With Var="TFEED"/>
+				<With Var="DL16"/>
+				<With Var="PP16"/>
+				<With Var="BR16"/>
+				<With Var="TB16"/>
+				<With Var="TF18"/>
+			</Event>
+		</EventInputs>
+		<EventOutputs>
+			<Event Name="INITO" Type="Event" Comment="Initialization Confirm">
+				<With Var="TB17"/>
+				<With Var="RL17"/>
+				<With Var="TF17"/>
+			</Event>
+			<Event Name="CNF" Type="Event" Comment="Execution Confirmation">
+				<With Var="TB17"/>
+				<With Var="DL17"/>
+				<With Var="TF17"/>
+				<With Var="BR17"/>
+				<With Var="PP17"/>
+				<With Var="TFEEDset"/>
+				<With Var="B0set"/>
+				<With Var="WSset"/>
+				<With Var="RL17"/>
+			</Event>
+		</EventOutputs>
+		<InputVars>
+			<VarDeclaration Name="B0" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TFEED" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DL16" Type="REAL" Comment=""/>
+			<VarDeclaration Name="PP16" Type="REAL" Comment=""/>
+			<VarDeclaration Name="BR16" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TB16" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="TF18" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="DT" Type="REAL" Comment=""/>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="B0set" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WSset" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TFEEDset" Type="REAL" Comment=""/>
+			<VarDeclaration Name="PP17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="BR17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DL17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TF17" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="TB17" Type="LREAL" Comment=""/>
+			<VarDeclaration Name="RL17" Type="LREAL" Comment=""/>
+		</OutputVars>
+	</InterfaceList>
+	<BasicFB>
+		<InternalVars>
+			<VarDeclaration Name="AB" Type="REAL" Comment="internal variabel"/>
+			<VarDeclaration Name="UU" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TREF" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AD" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AHC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AHR" Type="REAL" Comment=""/>
+			<VarDeclaration Name="AS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="REC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WN" Type="REAL" Comment=""/>
+			<VarDeclaration Name="WN_1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="XKN" Type="REAL" Comment=""/>
+			<VarDeclaration Name="C1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="HS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="G" Type="REAL" Comment=""/>
+			<VarDeclaration Name="W1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TFREC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DTS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TF17_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="RL17_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TB17_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="USS" Type="REAL" Comment=""/>
+			<VarDeclaration Name="RHOB" Type="REAL" Comment=""/>
+			<VarDeclaration Name="CPB" Type="REAL" Comment=""/>
+			<VarDeclaration Name="CPF" Type="REAL" Comment=""/>
+			<VarDeclaration Name="FMW" Type="REAL" Comment=""/>
+			<VarDeclaration Name="HLV" Type="REAL" Comment=""/>
+			<VarDeclaration Name="HV" Type="REAL" Comment=""/>
+			<VarDeclaration Name="BPR" Type="REAL" Comment=""/>
+			<VarDeclaration Name="FMC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="U" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A" Type="REAL" Comment=""/>
+			<VarDeclaration Name="B" Type="REAL" Comment=""/>
+			<VarDeclaration Name="C" Type="REAL" Comment=""/>
+			<VarDeclaration Name="D1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="d" Type="REAL" Comment=""/>
+			<VarDeclaration Name="a" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A1" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A2" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A3" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A4" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A5" Type="REAL" Comment=""/>
+			<VarDeclaration Name="A6" Type="REAL" Comment=""/>
+			<VarDeclaration Name="p" Type="REAL" Comment=""/>
+			<VarDeclaration Name="q" Type="REAL" Comment=""/>
+			<VarDeclaration Name="TC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="PC" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DTB17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DEN17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DH17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DP17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DPDH17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DT17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="m" Type="REAL" Comment=""/>
+			<VarDeclaration Name="n" Type="REAL" Comment=""/>
+			<VarDeclaration Name="VR17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA17" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA39" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA61" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA17_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA39_last" Type="REAL" Comment=""/>
+			<VarDeclaration Name="DELTA61_last" Type="REAL" Comment=""/>
+		</InternalVars>
+		<ECC>
+			<ECState Name="START" Comment="Initial State" x="473.33333333333337" y="1120.0">
+			</ECState>
+			<ECState Name="State" Comment="" x="1333.3333333333335" y="533.3333333333334">
+				<ECAction Algorithm="initialize" Output="INITO"/>
+			</ECState>
+			<ECState Name="State_1" Comment="" x="1760.0" y="1060.0">
+				<ECAction Algorithm="proses"/>
+			</ECState>
+			<ECState Name="State_2" Comment="" x="1206.6666666666667" y="1420.0">
+				<ECAction Algorithm="integrasi" Output="CNF"/>
+			</ECState>
+			<ECTransition Source="START" Destination="State" Condition="INIT" Comment="" x="953.3333333333334" y="766.6666666666667"/>
+			<ECTransition Source="State" Destination="START" Condition="1" Comment="" x="1186.6666666666667" y="960.0"/>
+			<ECTransition Source="START" Destination="State_1" Condition="REQ" Comment="" x="1293.3333333333335" y="1160.0"/>
+			<ECTransition Source="State_1" Destination="State_2" Condition="1" Comment="" x="1666.6666666666667" y="1300.0"/>
+			<ECTransition Source="State_2" Destination="START" Condition="1" Comment="" x="1046.6666666666667" y="1400.0"/>
+		</ECC>
+		<Algorithm Name="initialize" Comment="Initialization algorithm">
+			<ST><![CDATA[TREF :=273.15;
+AB :=57.2727;
+AHC :=4069.2;
+AHR :=2639.7;
+AS :=3225.7;
+REC :=0.0;
+//TF2:=TF2;
+
+//TFEED :=TFEED1+TREF; 
+ //TS:=TS1+TREF;
+WN :=3.0;
+XKN :=0.68;
+HS:=0.11;
+G :=9.81;
+W1 :=0.50;
+ 
+RL17 := 0.613640754894074;
+TB17 := 323.552719861124; 
+TF17 := 320.275377684374; 
+TF18 := 318.266914942048;
+
+
+RL17_last :=RL17;    
+TB17_last :=TB17;   
+TF17_last :=TF17;   
+
+
+
+
+]]></ST>
+		</Algorithm>
+		<Algorithm Name="proses" Comment="kalkulasi">
+			<ST><![CDATA[UU := TFEED;
+U :=UU; 
+
+USS :=49.767;
+C1 :=0.625;
+RHOB :=1032.4; //maassa jenis brine
+CPB :=1.00; //heatcapacity Brine
+CPF :=1.00; //heat capacity feed
+FMW :=23654.0;
+HLV :=563.7959;
+HV :=625.1971;
+BPR :=2.192; 
+FMC :=34736.09;
+//U :=UU; //feed temp
+
+
+
+///  Calculate the physical properties
+
+//A :=3.2437814;
+//B :=5.86826*0.001;
+//C :=1.1702379*0.00000001;
+//D1 :=2.1878462*0.001;
+//TC :=647.27; 
+//PC :=218.167; 
+
+
+A1 :=3.2437814;
+A2:=5.86826*0.001;
+A3:=1.1702379*0.00000001;
+A4 :=2.1878462*0.001;
+A5 :=647.27; 
+A6 :=218.167; 
+
+DTB17 :=A5-TB17;
+DEN17 :=(A1+A2*DTB17+A3*DTB17*DTB17*DTB17)/(1+A4*DTB17)*DTB17/TB17;
+p:=DEN17;
+q:=10.0;
+PP17 :=A6/(EXPT(q, p));
+
+// calculate the brine flow rates
+DP17:=PP16-PP17;
+DH17:=RL17-C1*HS; 
+DPDH17 :=DP17*101000+G*RHOB*DH17; 
+m:=DPDH17*RHOB;
+n:=0.5;
+BR17 :=WN*XKN*RL17*(EXPT(m, n));
+BR17 :=BR17*60.0/1000.0;
+
+// calculate the vapor flow rates
+    
+DT17 :=TB17-BPR/1.8-(TF18+TF17)*0.5;
+VR17:=U*AHC*DT17/HLV/1000.0;
+DL17 :=DL16+VR17;
+
+
+//// state equation
+DELTA17 :=(BR16-BR17-VR17)*1000.0/RHOB/AB;
+DELTA39 :=((BR16*CPB*(TB16-TB17))-VR17*(HV-CPB*(TB17-TREF)))*1000.0/AB/RHOB/CPB/RL17;
+DELTA61 :=(B0*CPF*(TF18-TF17)*1000+(U*AHC*DT17))/FMW/CPF;
+]]></ST>
+		</Algorithm>
+		<Algorithm Name="integrasi" Comment="new algorithm">
+			<ST><![CDATA[B0set:=B0;
+WSset:=WS ;
+TFEEDset:=TFEED;
+//integrasi
+RL17 := (DELTA17 + DELTA17_last)*0.5*DT + RL17_last;
+DELTA17_last :=DELTA17 ;
+RL17_last :=RL17; 
+
+TB17:= (DELTA39 + DELTA39_last)*0.5*DT + TB17_last;
+DELTA39_last :=DELTA39 ;
+TB17_last:=TB17; 
+
+TF17 := (DELTA61 + DELTA61_last)*0.5*DT + TF17_last;
+DELTA61_last :=DELTA61 ;
+TF17_last :=TF17; 
+
+
+]]></ST>
+		</Algorithm>
+	</BasicFB>
+</FBType>
